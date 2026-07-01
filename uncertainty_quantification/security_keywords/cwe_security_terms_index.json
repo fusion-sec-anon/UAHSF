@@ -1,0 +1,2018 @@
+{
+  "description": "CWE-derived security terms used as the CWE-side vocabulary source for constructing the security keyword reference set (SSWD). Includes provenance, semantic tags, and concept groupings for auditability and downstream code usage.",
+  "source_terms_file": "source_cwe_terms_expanded.txt",
+  "term_count": 123,
+  "terms": [
+    {
+      "term": "access",
+      "lower": "access",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "auth",
+      "lower": "auth",
+      "is_acronym": false,
+      "tags": [
+        "auth"
+      ],
+      "families": [
+        "auth_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "AuthC",
+      "lower": "authc",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "authenticate",
+      "lower": "authenticate",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "authentication",
+      "lower": "authentication",
+      "is_acronym": false,
+      "tags": [
+        "auth"
+      ],
+      "families": [
+        "auth_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "authenticity",
+      "lower": "authenticity",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "authentification",
+      "lower": "authentification",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "AuthN",
+      "lower": "authn",
+      "is_acronym": false,
+      "tags": [
+        "auth"
+      ],
+      "families": [
+        "auth_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "authorization",
+      "lower": "authorization",
+      "is_acronym": false,
+      "tags": [
+        "auth"
+      ],
+      "families": [
+        "auth_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "AuthZ",
+      "lower": "authz",
+      "is_acronym": false,
+      "tags": [
+        "auth"
+      ],
+      "families": [
+        "auth_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "buffer",
+      "lower": "buffer",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Buffer Overflow",
+      "lower": "buffer overflow",
+      "is_acronym": false,
+      "tags": [
+        "buffer_overflow"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "buffer overrun",
+      "lower": "buffer overrun",
+      "is_acronym": false,
+      "tags": [
+        "buffer_overflow"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "Code Injection",
+      "lower": "code injection",
+      "is_acronym": false,
+      "tags": [
+        "code_injection"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_name_alias",
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "command",
+      "lower": "command",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Command injection",
+      "lower": "command injection",
+      "is_acronym": false,
+      "tags": [
+        "command_injection"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_name_alias",
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "commands",
+      "lower": "commands",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "corruption",
+      "lower": "corruption",
+      "is_acronym": false,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "credential",
+      "lower": "credential",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "credentials",
+      "lower": "credentials",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Cross Site Reference Forgery",
+      "lower": "cross site reference forgery",
+      "is_acronym": false,
+      "tags": [
+        "csrf"
+      ],
+      "families": [
+        "csrf_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "Cross-site Scripting",
+      "lower": "cross-site scripting",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "cwe_top25_name_alias",
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "cryptographic",
+      "lower": "cryptographic",
+      "is_acronym": false,
+      "tags": [
+        "crypto"
+      ],
+      "families": [
+        "hardening_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "CSRF",
+      "lower": "csrf",
+      "is_acronym": true,
+      "tags": [
+        "csrf"
+      ],
+      "families": [
+        "csrf_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_phrase_mined",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "csrftester",
+      "lower": "csrftester",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "dangling",
+      "lower": "dangling",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Dangling pointer",
+      "lower": "dangling pointer",
+      "is_acronym": false,
+      "tags": [
+        "memory_corruption",
+        "uaf"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "deref",
+      "lower": "deref",
+      "is_acronym": false,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "dereference",
+      "lower": "dereference",
+      "is_acronym": false,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Deserialization",
+      "lower": "deserialization",
+      "is_acronym": false,
+      "tags": [
+        "deserialization"
+      ],
+      "families": [
+        "deserialization_family"
+      ],
+      "provenance": [
+        "cwe_top25_phrase_mined",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "directory",
+      "lower": "directory",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Directory traversal",
+      "lower": "directory traversal",
+      "is_acronym": false,
+      "tags": [
+        "directory_traversal",
+        "traversal_general"
+      ],
+      "families": [
+        "traversal_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "disclosure",
+      "lower": "disclosure",
+      "is_acronym": false,
+      "tags": [
+        "info_disclosure"
+      ],
+      "families": [
+        "info_disclosure_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "DOM-based XSS",
+      "lower": "dom-based xss",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "DOM-Based XSS",
+      "lower": "dom-based xss",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "Type 0 XSS",
+      "lower": "type 0 xss",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "unknown_or_merged"
+      ]
+    },
+    {
+      "term": "escape",
+      "lower": "escape",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "execute",
+      "lower": "execute",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "executed",
+      "lower": "executed",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "execution",
+      "lower": "execution",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "exhaustion",
+      "lower": "exhaustion",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "exploitable",
+      "lower": "exploitable",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "exploitation",
+      "lower": "exploitation",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "exposure",
+      "lower": "exposure",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "exposures",
+      "lower": "exposures",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "forgery",
+      "lower": "forgery",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "format string",
+      "lower": "format string",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "hash",
+      "lower": "hash",
+      "is_acronym": false,
+      "tags": [
+        "crypto"
+      ],
+      "families": [
+        "hardening_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "htaccess",
+      "lower": "htaccess",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "HTML Injection",
+      "lower": "html injection",
+      "is_acronym": false,
+      "tags": [
+        "html_injection"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "Information Disclosure",
+      "lower": "information disclosure",
+      "is_acronym": false,
+      "tags": [
+        "info_disclosure"
+      ],
+      "families": [
+        "info_disclosure_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "Information Leak",
+      "lower": "information leak",
+      "is_acronym": false,
+      "tags": [
+        "info_disclosure"
+      ],
+      "families": [
+        "info_disclosure_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "injection",
+      "lower": "injection",
+      "is_acronym": false,
+      "tags": [
+        "injection_general"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Integer Overflow",
+      "lower": "integer overflow",
+      "is_acronym": false,
+      "tags": [
+        "integer_overflow"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "leak",
+      "lower": "leak",
+      "is_acronym": false,
+      "tags": [
+        "info_disclosure"
+      ],
+      "families": [
+        "info_disclosure_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "malicious",
+      "lower": "malicious",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Marshaling, Unmarshaling",
+      "lower": "marshaling, unmarshaling",
+      "is_acronym": false,
+      "tags": [
+        "deserialization"
+      ],
+      "families": [
+        "deserialization_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "memory",
+      "lower": "memory",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Memory Corruption",
+      "lower": "memory corruption",
+      "is_acronym": false,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "memory safety",
+      "lower": "memory safety",
+      "is_acronym": false,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "nil pointer dereference",
+      "lower": "nil pointer dereference",
+      "is_acronym": false,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "NPD",
+      "lower": "npd",
+      "is_acronym": true,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "NPE",
+      "lower": "npe",
+      "is_acronym": true,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "null deref",
+      "lower": "null deref",
+      "is_acronym": false,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "OOB read",
+      "lower": "oob read",
+      "is_acronym": false,
+      "tags": [
+        "oob"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "OS Command Injection",
+      "lower": "os command injection",
+      "is_acronym": false,
+      "tags": [
+        "command_injection"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_name_alias"
+      ]
+    },
+    {
+      "term": "Out-of-bounds Read",
+      "lower": "out-of-bounds read",
+      "is_acronym": false,
+      "tags": [
+        "oob"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "Out-of-bounds Write",
+      "lower": "out-of-bounds write",
+      "is_acronym": false,
+      "tags": [
+        "oob"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "Overflow",
+      "lower": "overflow",
+      "is_acronym": false,
+      "tags": [
+        "overflow"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "overflows",
+      "lower": "overflows",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "overrun",
+      "lower": "overrun",
+      "is_acronym": false,
+      "tags": [
+        "overflow"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "password",
+      "lower": "password",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "path",
+      "lower": "path",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Path traversal",
+      "lower": "path traversal",
+      "is_acronym": false,
+      "tags": [
+        "path_traversal",
+        "traversal_general"
+      ],
+      "families": [
+        "traversal_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_name_alias",
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "permissions",
+      "lower": "permissions",
+      "is_acronym": false,
+      "tags": [
+        "auth"
+      ],
+      "families": [
+        "auth_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "PHP Object Injection",
+      "lower": "php object injection",
+      "is_acronym": false,
+      "tags": [
+        "php_object_injection"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "Pickling, Unpickling",
+      "lower": "pickling, unpickling",
+      "is_acronym": false,
+      "tags": [
+        "deserialization"
+      ],
+      "families": [
+        "deserialization_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "pointer",
+      "lower": "pointer",
+      "is_acronym": false,
+      "tags": [
+        "memory_corruption"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "privilege",
+      "lower": "privilege",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "privileged",
+      "lower": "privileged",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "privileges",
+      "lower": "privileges",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Reflected XSS",
+      "lower": "reflected xss",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "unknown_or_merged"
+      ]
+    },
+    {
+      "term": "Non-Persistent XSS",
+      "lower": "non-persistent xss",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "unknown_or_merged"
+      ]
+    },
+    {
+      "term": "Type 1 XSS",
+      "lower": "type 1 xss",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "unknown_or_merged"
+      ]
+    },
+    {
+      "term": "resource",
+      "lower": "resource",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Resource Exhaustion",
+      "lower": "resource exhaustion",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "resources",
+      "lower": "resources",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "sanitized",
+      "lower": "sanitized",
+      "is_acronym": false,
+      "tags": [
+        "validation"
+      ],
+      "families": [
+        "hardening_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "script",
+      "lower": "script",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "scripting",
+      "lower": "scripting",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "sensitive",
+      "lower": "sensitive",
+      "is_acronym": false,
+      "tags": [
+        "info_disclosure"
+      ],
+      "families": [
+        "info_disclosure_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "session",
+      "lower": "session",
+      "is_acronym": false,
+      "tags": [
+        "session"
+      ],
+      "families": [
+        "auth_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Session Riding",
+      "lower": "session riding",
+      "is_acronym": false,
+      "tags": [
+        "csrf",
+        "session"
+      ],
+      "families": [
+        "auth_family",
+        "csrf_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "shell",
+      "lower": "shell",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Shell injection",
+      "lower": "shell injection",
+      "is_acronym": false,
+      "tags": [
+        "command_injection"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "Shell metacharacters",
+      "lower": "shell metacharacters",
+      "is_acronym": false,
+      "tags": [
+        "command_injection"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "signature",
+      "lower": "signature",
+      "is_acronym": false,
+      "tags": [
+        "crypto"
+      ],
+      "families": [
+        "hardening_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "source",
+      "lower": "source",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "SQL injection",
+      "lower": "sql injection",
+      "is_acronym": false,
+      "tags": [
+        "sqli"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_name_alias",
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "SQLi",
+      "lower": "sqli",
+      "is_acronym": false,
+      "tags": [
+        "sqli"
+      ],
+      "families": [
+        "injection_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "SSRF",
+      "lower": "ssrf",
+      "is_acronym": true,
+      "tags": [
+        "ssrf"
+      ],
+      "families": [
+        "ssrf_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "Stored XSS",
+      "lower": "stored xss",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "unknown_or_merged"
+      ]
+    },
+    {
+      "term": "Persistent XSS",
+      "lower": "persistent xss",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "unknown_or_merged"
+      ]
+    },
+    {
+      "term": "Type 2 XSS",
+      "lower": "type 2 xss",
+      "is_acronym": false,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "unknown_or_merged"
+      ]
+    },
+    {
+      "term": "strace",
+      "lower": "strace",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "token",
+      "lower": "token",
+      "is_acronym": false,
+      "tags": [
+        "session"
+      ],
+      "families": [
+        "auth_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "traversal",
+      "lower": "traversal",
+      "is_acronym": false,
+      "tags": [
+        "traversal_general"
+      ],
+      "families": [
+        "traversal_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "UAF",
+      "lower": "uaf",
+      "is_acronym": true,
+      "tags": [
+        "uaf"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "unauthorized",
+      "lower": "unauthorized",
+      "is_acronym": false,
+      "tags": [
+        "auth"
+      ],
+      "families": [
+        "auth_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Unrestricted File Upload",
+      "lower": "unrestricted file upload",
+      "is_acronym": false,
+      "tags": [
+        "file_upload"
+      ],
+      "families": [
+        "hardening_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "untrusted",
+      "lower": "untrusted",
+      "is_acronym": false,
+      "tags": [
+        "validation"
+      ],
+      "families": [
+        "hardening_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "Use After Free",
+      "lower": "use after free",
+      "is_acronym": false,
+      "tags": [
+        "uaf"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_phrase_mined"
+      ]
+    },
+    {
+      "term": "Use-After-Free",
+      "lower": "use-after-free",
+      "is_acronym": false,
+      "tags": [
+        "uaf"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "validated",
+      "lower": "validated",
+      "is_acronym": false,
+      "tags": [
+        "validation"
+      ],
+      "families": [
+        "hardening_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "validation",
+      "lower": "validation",
+      "is_acronym": false,
+      "tags": [
+        "validation"
+      ],
+      "families": [
+        "hardening_family"
+      ],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "vulnerabilities",
+      "lower": "vulnerabilities",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "vulnerability",
+      "lower": "vulnerability",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "vulnerable",
+      "lower": "vulnerable",
+      "is_acronym": false,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "wrap, wrap-around, wrap around",
+      "lower": "wrap, wrap-around, wrap around",
+      "is_acronym": false,
+      "tags": [
+        "overflow"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "Wraparound",
+      "lower": "wraparound",
+      "is_acronym": false,
+      "tags": [
+        "overflow"
+      ],
+      "families": [
+        "memory_safety_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "cwe_top25_phrase_mined",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "XSPA",
+      "lower": "xspa",
+      "is_acronym": true,
+      "tags": [],
+      "families": [],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    },
+    {
+      "term": "XSRF",
+      "lower": "xsrf",
+      "is_acronym": true,
+      "tags": [
+        "csrf"
+      ],
+      "families": [
+        "csrf_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms",
+        "curated_cwe_keywords"
+      ]
+    },
+    {
+      "term": "XSS",
+      "lower": "xss",
+      "is_acronym": true,
+      "tags": [
+        "xss"
+      ],
+      "families": [
+        "xss_family"
+      ],
+      "provenance": [
+        "cwe_top25_alternate_terms"
+      ]
+    }
+  ],
+  "indexes": {
+    "by_family": {
+      "auth_family": [
+        "auth",
+        "authentication",
+        "AuthN",
+        "authorization",
+        "AuthZ",
+        "permissions",
+        "session",
+        "Session Riding",
+        "token",
+        "unauthorized"
+      ],
+      "memory_safety_family": [
+        "Buffer Overflow",
+        "buffer overrun",
+        "corruption",
+        "Dangling pointer",
+        "deref",
+        "dereference",
+        "Integer Overflow",
+        "Memory Corruption",
+        "memory safety",
+        "nil pointer dereference",
+        "NPD",
+        "NPE",
+        "null deref",
+        "OOB read",
+        "Out-of-bounds Read",
+        "Out-of-bounds Write",
+        "Overflow",
+        "overrun",
+        "pointer",
+        "UAF",
+        "Use After Free",
+        "Use-After-Free",
+        "wrap, wrap-around, wrap around",
+        "Wraparound"
+      ],
+      "injection_family": [
+        "Code Injection",
+        "Command injection",
+        "HTML Injection",
+        "injection",
+        "OS Command Injection",
+        "PHP Object Injection",
+        "Shell injection",
+        "Shell metacharacters",
+        "SQL injection",
+        "SQLi"
+      ],
+      "csrf_family": [
+        "Cross Site Reference Forgery",
+        "CSRF",
+        "Session Riding",
+        "XSRF"
+      ],
+      "xss_family": [
+        "Cross-site Scripting",
+        "DOM-Based XSS",
+        "DOM-based XSS",
+        "Non-Persistent XSS",
+        "Persistent XSS",
+        "Reflected XSS",
+        "Stored XSS",
+        "Type 0 XSS",
+        "Type 1 XSS",
+        "Type 2 XSS",
+        "XSS"
+      ],
+      "hardening_family": [
+        "cryptographic",
+        "hash",
+        "sanitized",
+        "signature",
+        "Unrestricted File Upload",
+        "untrusted",
+        "validated",
+        "validation"
+      ],
+      "deserialization_family": [
+        "Deserialization",
+        "Marshaling, Unmarshaling",
+        "Pickling, Unpickling"
+      ],
+      "traversal_family": [
+        "Directory traversal",
+        "Path traversal",
+        "traversal"
+      ],
+      "info_disclosure_family": [
+        "disclosure",
+        "Information Disclosure",
+        "Information Leak",
+        "leak",
+        "sensitive"
+      ],
+      "ssrf_family": [
+        "SSRF"
+      ]
+    },
+    "by_tag": {
+      "auth": [
+        "auth",
+        "authentication",
+        "AuthN",
+        "authorization",
+        "AuthZ",
+        "permissions",
+        "unauthorized"
+      ],
+      "buffer_overflow": [
+        "Buffer Overflow",
+        "buffer overrun"
+      ],
+      "code_injection": [
+        "Code Injection"
+      ],
+      "command_injection": [
+        "Command injection",
+        "OS Command Injection",
+        "Shell injection",
+        "Shell metacharacters"
+      ],
+      "memory_corruption": [
+        "corruption",
+        "Dangling pointer",
+        "deref",
+        "dereference",
+        "Memory Corruption",
+        "memory safety",
+        "nil pointer dereference",
+        "NPD",
+        "NPE",
+        "null deref",
+        "pointer"
+      ],
+      "csrf": [
+        "Cross Site Reference Forgery",
+        "CSRF",
+        "Session Riding",
+        "XSRF"
+      ],
+      "xss": [
+        "Cross-site Scripting",
+        "DOM-Based XSS",
+        "DOM-based XSS",
+        "Non-Persistent XSS",
+        "Persistent XSS",
+        "Reflected XSS",
+        "Stored XSS",
+        "Type 0 XSS",
+        "Type 1 XSS",
+        "Type 2 XSS",
+        "XSS"
+      ],
+      "crypto": [
+        "cryptographic",
+        "hash",
+        "signature"
+      ],
+      "uaf": [
+        "Dangling pointer",
+        "UAF",
+        "Use After Free",
+        "Use-After-Free"
+      ],
+      "deserialization": [
+        "Deserialization",
+        "Marshaling, Unmarshaling",
+        "Pickling, Unpickling"
+      ],
+      "directory_traversal": [
+        "Directory traversal"
+      ],
+      "traversal_general": [
+        "Directory traversal",
+        "Path traversal",
+        "traversal"
+      ],
+      "info_disclosure": [
+        "disclosure",
+        "Information Disclosure",
+        "Information Leak",
+        "leak",
+        "sensitive"
+      ],
+      "html_injection": [
+        "HTML Injection"
+      ],
+      "injection_general": [
+        "injection"
+      ],
+      "integer_overflow": [
+        "Integer Overflow"
+      ],
+      "oob": [
+        "OOB read",
+        "Out-of-bounds Read",
+        "Out-of-bounds Write"
+      ],
+      "overflow": [
+        "Overflow",
+        "overrun",
+        "wrap, wrap-around, wrap around",
+        "Wraparound"
+      ],
+      "path_traversal": [
+        "Path traversal"
+      ],
+      "php_object_injection": [
+        "PHP Object Injection"
+      ],
+      "validation": [
+        "sanitized",
+        "untrusted",
+        "validated",
+        "validation"
+      ],
+      "session": [
+        "session",
+        "Session Riding",
+        "token"
+      ],
+      "sqli": [
+        "SQL injection",
+        "SQLi"
+      ],
+      "ssrf": [
+        "SSRF"
+      ],
+      "file_upload": [
+        "Unrestricted File Upload"
+      ]
+    }
+  },
+  "concept_groups": {
+    "XSS": {
+      "description": "Terms related to Cross-Site Scripting variants (stored/reflected/DOM-based/type-based).",
+      "tags": [
+        "xss"
+      ],
+      "terms": [
+        "Cross-site Scripting",
+        "DOM-Based XSS",
+        "DOM-based XSS",
+        "Non-Persistent XSS",
+        "Persistent XSS",
+        "Reflected XSS",
+        "Stored XSS",
+        "Type 0 XSS",
+        "Type 1 XSS",
+        "Type 2 XSS",
+        "XSS"
+      ],
+      "count": 10
+    },
+    "CSRF": {
+      "description": "Terms related to Cross-Site Request Forgery and synonyms (XSRF/Session Riding).",
+      "tags": [
+        "csrf"
+      ],
+      "terms": [
+        "Cross Site Reference Forgery",
+        "CSRF",
+        "Session Riding",
+        "XSRF"
+      ],
+      "count": 4
+    },
+    "SSRF": {
+      "description": "Terms related to Server-Side Request Forgery.",
+      "tags": [
+        "ssrf"
+      ],
+      "terms": [
+        "SSRF"
+      ],
+      "count": 1
+    },
+    "Injection": {
+      "description": "Injection-related terms (SQL/command/code/HTML/PHP object, etc.).",
+      "tags": [
+        "sqli",
+        "command_injection",
+        "code_injection",
+        "html_injection",
+        "php_object_injection"
+      ],
+      "terms": [
+        "Code Injection",
+        "Command injection",
+        "HTML Injection",
+        "OS Command Injection",
+        "PHP Object Injection",
+        "Shell injection",
+        "Shell metacharacters",
+        "SQL injection",
+        "SQLi"
+      ],
+      "count": 9
+    },
+    "MemorySafety": {
+      "description": "Memory-safety terms (overflow, OOB, UAF, dangling pointer, memory corruption).",
+      "tags": [
+        "buffer_overflow",
+        "integer_overflow",
+        "oob",
+        "uaf",
+        "memory_corruption"
+      ],
+      "terms": [
+        "Buffer Overflow",
+        "buffer overrun",
+        "corruption",
+        "Dangling pointer",
+        "deref",
+        "dereference",
+        "Integer Overflow",
+        "Memory Corruption",
+        "memory safety",
+        "nil pointer dereference",
+        "NPD",
+        "NPE",
+        "null deref",
+        "OOB read",
+        "Out-of-bounds Read",
+        "Out-of-bounds Write",
+        "pointer",
+        "UAF",
+        "Use After Free",
+        "Use-After-Free"
+      ],
+      "count": 20
+    },
+    "Traversal": {
+      "description": "Path/directory traversal related terms.",
+      "tags": [
+        "path_traversal",
+        "directory_traversal",
+        "traversal_general"
+      ],
+      "terms": [
+        "Directory traversal",
+        "Path traversal",
+        "traversal"
+      ],
+      "count": 3
+    },
+    "Deserialization": {
+      "description": "Deserialization / (un)marshaling / (un)pickling related terms.",
+      "tags": [
+        "deserialization"
+      ],
+      "terms": [
+        "Deserialization",
+        "Marshaling, Unmarshaling",
+        "Pickling, Unpickling"
+      ],
+      "count": 3
+    },
+    "InfoDisclosure": {
+      "description": "Information disclosure/leak/sensitive-data terms.",
+      "tags": [
+        "info_disclosure"
+      ],
+      "terms": [
+        "disclosure",
+        "Information Disclosure",
+        "Information Leak",
+        "leak",
+        "sensitive"
+      ],
+      "count": 5
+    },
+    "AuthAccessControl": {
+      "description": "Authentication/authorization/access-control and session/credential terms.",
+      "tags": [
+        "auth",
+        "session"
+      ],
+      "terms": [
+        "auth",
+        "authentication",
+        "AuthN",
+        "authorization",
+        "AuthZ",
+        "permissions",
+        "session",
+        "Session Riding",
+        "token",
+        "unauthorized"
+      ],
+      "count": 10
+    },
+    "InputHardening": {
+      "description": "Validation/sanitization/untrusted and related hardening terms.",
+      "tags": [
+        "validation"
+      ],
+      "terms": [
+        "sanitized",
+        "untrusted",
+        "validated",
+        "validation"
+      ],
+      "count": 4
+    },
+    "Crypto": {
+      "description": "Cryptography-related terms (hash/signature/cryptographic).",
+      "tags": [
+        "crypto"
+      ],
+      "terms": [
+        "cryptographic",
+        "hash",
+        "signature"
+      ],
+      "count": 3
+    },
+    "FileUpload": {
+      "description": "Unrestricted file upload related terms.",
+      "tags": [
+        "file_upload"
+      ],
+      "terms": [
+        "Unrestricted File Upload"
+      ],
+      "count": 1
+    }
+  },
+  "provenance_stats": {
+    "has_top25_alternate_terms": 43,
+    "has_top25_name_alias": 6,
+    "has_top25_phrase_mined": 18,
+    "has_curated_keywords": 74
+  },
+  "schema_version": "1.0"
+}

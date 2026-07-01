@@ -1,0 +1,48 @@
+AuthC
+authentification
+AuthN
+AuthZ
+Buffer Overflow
+buffer overrun
+Code Injection
+Command injection
+Cross Site Reference Forgery
+Cross-site Scripting
+CSRF
+CSS
+Dangling pointer
+Directory traversal
+DOM-Based XSS / Type 0 XSS
+HTML Injection
+Information Disclosure
+Information Leak
+Marshaling, Unmarshaling
+Memory Corruption
+memory safety
+nil pointer dereference
+NPD
+NPE
+null deref
+OOB read
+OS Command Injection
+Overflow
+Path traversal
+PHP Object Injection
+Pickling, Unpickling
+Reflected XSS / Non-Persistent XSS / Type 1 XSS
+Resource Exhaustion
+Session Riding
+Shell injection
+Shell metacharacters
+SQL injection
+SQLi
+SSRF
+Stored XSS / Persistent XSS / Type 2 XSS
+UAF
+Unrestricted File Upload
+Use-After-Free
+wrap, wrap-around, wrap around
+Wraparound
+XSPA
+XSRF
+XSS

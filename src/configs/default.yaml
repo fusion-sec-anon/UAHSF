@@ -1,0 +1,36 @@
+seed: 42
+threshold: 0.5
+text_columns: [summary, description]
+label_column: label
+id_column: bug_id
+
+bert:
+  model_name: bert-base-uncased
+  max_length: 512
+  device: auto
+  dry_run_probability: 0.50
+
+local_uncertainty:
+  k_init: 3
+  k_small: 2
+  k_medium: 3
+  k_large: 5
+  tau_low: 0.35
+  tau_high: 0.70
+  max_terms: 8
+
+cwe:
+  pattern_file: uncertainty_quantification/cwe_patterns/cwe_patterns.json
+  keywords_file: uncertainty_quantification/security_keywords/source_cwe_terms.txt
+  top_k_missing_patterns: 3
+
+fusion:
+  beta: 0.5
+  k: 10.0
+
+llm:
+  mode: dry_run     # dry_run | parsed_cache | openai_compatible
+  parsed_cache: null
+  backbone: gpt-4o
+  temperature: 0
+  max_tokens: 500

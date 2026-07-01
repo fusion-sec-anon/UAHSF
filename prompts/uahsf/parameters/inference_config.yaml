@@ -1,0 +1,30 @@
+# LLM inference configuration
+
+default_model: gpt-4o
+
+default_settings:
+  temperature: 0
+  max_tokens: 500
+  top_p: 1.0
+  frequency_penalty: 0.0
+  presence_penalty: 0.0
+  response_format: text
+
+replacement_models:
+  deepseek-r1:
+    provider: deepseek_api
+    max_tokens: 500
+    response_format: text
+    sampling_parameters: backend_default
+
+  qwen2.5-72b-instruct:
+    provider: local_open_weight
+    max_new_tokens: 500
+    do_sample: false
+    response_format: decoded_text
+
+  llama-3.3-70b-instruct:
+    provider: local_open_weight
+    max_new_tokens: 500
+    do_sample: false
+    response_format: decoded_text

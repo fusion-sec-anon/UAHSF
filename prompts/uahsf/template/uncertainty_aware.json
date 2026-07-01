@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "You are an AI expert in bug report analysis. Your task is to decide whether a given bug report is a security bug report (SBR) or non-security bug report (NSBR). You will be provided with uncertainty indicators and an initial prediction from a BERT model to guide your reasoning."
+  },
+  {
+    "role": "user",
+    "content": "Task: Analyze the following bug report and determine whether it describes a security bug.\n\nBug Report: \"\"\"{}\"\"\"\n\nUncertainty Indicators:\n• Key Contradiction: The term [<[S_KWD]>] shows high contextual instability (contradiction score = [<[C_scores]>]), suggesting potential semantic ambiguity.\n• Completeness Deficiency: The report omits an explicit vulnerability trigger ([<[P_CWE]>]), completeness score = [<[M]>]).\n• Initial Prediction: Security-related (BERT confidence: [<[P_BERT]>]).\n\nInstructions:\n1) Interpret the meaning of [<[S_KWD]>] in this context—is it related to a security issue?\n2) Infer whether a hidden vulnerability trigger condition might exist.\n3) Make a final judgment, provide a brief justification, and indicate the predicted likelihood (as a percentage) of the report being security-related.\n\nOutput ONLY the JSON object defined in the schema below.\n\n## Output (STRICT JSON)\nReturn only a JSON object with the following fields:\n\n```json\n{\n  \"label\": \"SBR|NSBR\",\n  \"likelihood_percent\": 0,\n  \"justification\": \"string\",\n  \"term_interpretation\": \"string\",\n  \"inferred_trigger\": \"string\"\n}\n```\n\nConstraints:\n- Return ONLY the JSON object (no extra text).\n- `likelihood_percent` must be an integer in [0, 100].\n- Keep `justification` concise (1–3 sentences).\n- If you cannot infer a trigger, set `inferred_trigger` to an empty string.\n"
+  }
+]

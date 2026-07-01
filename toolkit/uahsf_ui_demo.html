@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UAHSF SBR Detection Demo</title>
+  <style>
+    :root { --bg:#f7f7fb; --card:#ffffff; --text:#1f2937; --muted:#6b7280; --line:#e5e7eb; --accent:#4f46e5; --ok:#047857; --warn:#b45309; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif; background:var(--bg); color:var(--text); }
+    .wrap { max-width: 1120px; margin: 32px auto; padding: 0 18px; }
+    .hero { background: linear-gradient(135deg,#eef2ff,#ffffff); border:1px solid var(--line); border-radius:18px; padding:26px; }
+    h1 { margin:0 0 8px; font-size: 30px; }
+    .muted { color:var(--muted); line-height:1.55; }
+    .grid { display:grid; grid-template-columns: 1.15fr 0.85fr; gap:18px; margin-top:18px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow: 0 8px 18px rgba(0,0,0,.04); }
+    textarea { width:100%; min-height:210px; resize:vertical; border:1px solid var(--line); border-radius:12px; padding:14px; font-size:14px; line-height:1.5; }
+    button { border:0; border-radius:12px; padding:11px 16px; background:var(--accent); color:white; font-weight:700; cursor:pointer; }
+    button.secondary { background:#e0e7ff; color:#3730a3; margin-right:8px; }
+    .metrics { display:grid; grid-template-columns: repeat(4,1fr); gap:12px; margin-top:16px; }
+    .metric { background:#fafafa; border:1px solid var(--line); border-radius:14px; padding:14px; }
+    .metric .label { font-size:12px; color:var(--muted); }
+    .metric .value { font-size:24px; font-weight:800; margin-top:5px; }
+    .pill { display:inline-block; background:#eef2ff; color:#3730a3; border-radius:999px; padding:5px 10px; margin:4px 4px 0 0; font-size:13px; }
+    table { width:100%; border-collapse: collapse; font-size:13px; }
+    th, td { text-align:left; border-bottom:1px solid var(--line); padding:8px; vertical-align:top; }
+    th { color:var(--muted); font-weight:700; }
+    .decision { font-size:36px; font-weight:900; }
+    .sbr { color:var(--ok); }
+    .nsbr { color:var(--warn); }
+    .bar { height:8px; background:#eef2ff; border-radius:999px; overflow:hidden; margin-top:8px; }
+    .bar > span { display:block; height:100%; background:var(--accent); }
+    footer { color:var(--muted); font-size:12px; margin-top:18px; }
+    @media (max-width: 860px) { .grid,.metrics { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <h1>🛡️ UAHSF SBR Detection Demo</h1>
+    <div class="muted">A lightweight interface for visualizing uncertainty-aware security bug report detection.</div>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Bug report input</h2>
+      <p class="muted">Paste a bug report summary and description, or load a sample.</p>
+      <p>
+        <button class="secondary" onclick="loadSample(0)">Potential SBR</button>
+        <button class="secondary" onclick="loadSample(1)">Likely NSBR</button>
+        <button class="secondary" onclick="loadSample(2)">Ambiguous</button>
+      </p>
+      <textarea id="text"></textarea>
+      <p><button onclick="analyze()">Analyze report</button></p>
+    </div>
+
+    <div class="card">
+      <h2>Final decision</h2>
+      <div id="decision" class="decision">—</div>
+      <div class="bar"><span id="pbar" style="width:0%"></span></div>
+      <p class="muted" id="rationale">Run the demo to inspect the UAHSF-style fusion trace.</p>
+      <div class="metrics">
+        <div class="metric"><div class="label">P_final</div><div class="value" id="pfinal">—</div></div>
+        <div class="metric"><div class="label">P_BERT</div><div class="value" id="pbert">—</div></div>
+        <div class="metric"><div class="label">P_LLM</div><div class="value" id="pllm">—</div></div>
+        <div class="metric"><div class="label">α_BERT</div><div class="value" id="alpha">—</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Uncertainty signals</h2>
+      <div class="metrics">
+        <div class="metric"><div class="label">Local conflict</div><div class="value" id="local">—</div></div>
+        <div class="metric"><div class="label">Global completeness</div><div class="value" id="global">—</div></div>
+        <div class="metric"><div class="label">Combined uncertainty</div><div class="value" id="unc">—</div></div>
+        <div class="metric"><div class="label">Matched terms</div><div class="value" id="termcount">—</div></div>
+      </div>
+      <h3>Matched security terms</h3>
+      <div id="terms" class="muted">—</div>
+    </div>
+
+    <div class="card">
+      <h2>Low-coverage CWE patterns</h2>
+      <table id="patterns"><thead><tr><th>Pattern</th><th>Coverage</th><th>Matched terms</th></tr></thead><tbody></tbody></table>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:18px">
+    <h2>Local contradiction terms</h2>
+    <table id="contradictions"><thead><tr><th>Term</th><th>Score</th><th>Note</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <footer>UAHSF Toolkit UI Demo. Dry-run heuristic visualization only.</footer>
+</div>
+
+<script>
+const samples = [
+  "Chrome crashes when opening a crafted file URL. The file handler allows unauthorized read access and may expose local credentials.",
+  "The settings page crashes after clicking the button twice. No stack trace is shown and the issue seems related to UI loading.",
+  "Memory leak in session restore after opening multiple tabs. The browser becomes slow and sometimes crashes."
+];
+const securityTerms = ["access","authentication","authorization","bypass","buffer","command","confidentiality","corruption","credential","csrf","directory","disclose","dos","execute","execution","exposure","file","injection","leak","memory","overflow","permission","privilege","sandbox","script","sql","token","traversal","validate","validation","xss","crash","stack"];
+const ambiguousTerms = ["crash","leak","injection","stack","overflow","privilege","permission","access","token","sandbox","script","file"];
+const benignContext = ["ui","button","display","layout","loading","test","mock","dependency","injected","logging","performance","slow","cosmetic","message","tooltip"];
+const triggerTerms = ["input","request","payload","parameter","argument","url","uri","file","upload","open","parse","when","via","send","submit","crafted"];
+const impactTerms = ["execute","execution","read","write","overwrite","disclose","expose","leak","corrupt","crash","dos","bypass","escalate","privilege","confidentiality","arbitrary","unauthorized","compromise"];
+const cwePatterns = [
+  ["CWE-20","Improper Input Validation",["input","validate","validation","parameter","crafted"]],
+  ["CWE-79","Cross-site Scripting",["xss","script","html","sanitize","browser"]],
+  ["CWE-89","SQL Injection",["sql","injection","query","database"]],
+  ["CWE-119","Memory Buffer Errors",["buffer","overflow","memory","bounds","overwrite"]],
+  ["CWE-200","Exposure of Sensitive Information",["expose","leak","disclose","credential","token","confidentiality"]],
+  ["CWE-22","Path Traversal",["path","directory","traversal","file"]],
+  ["CWE-287","Improper Authentication",["authentication","login","credential","session"]],
+  ["CWE-269","Improper Privilege Management",["privilege","permission","escalate","access"]]
+];
+function loadSample(i){ document.getElementById('text').value = samples[i]; }
+function toks(s){ return (s.toLowerCase().match(/[a-zA-Z][a-zA-Z0-9_-]{2,}/g) || []); }
+function uniq(a){ return [...new Set(a)]; }
+function clip(x){ return Math.max(0, Math.min(1, x)); }
+function sigmoid(x){ return 1/(1+Math.exp(-x)); }
+function intersect(a,b){ const bs = new Set(b); return a.filter(x => bs.has(x)); }
+function analyze(){
+  const text = document.getElementById('text').value || '';
+  const t = toks(text), set = uniq(t), lenNorm = Math.min(t.length/120,1);
+  const matched = intersect(set, securityTerms).sort();
+  const trigger = intersect(set, triggerTerms);
+  const impact = intersect(set, impactTerms);
+  const benign = intersect(set, benignContext);
+  const evidence = 0.55*matched.length + 0.75*trigger.length + 0.9*impact.length;
+  const penalty = 0.55*benign.length;
+  const pbert = clip(sigmoid(-2.0 + 0.38*evidence - 0.22*penalty));
+  const contradictions = intersect(set, ambiguousTerms).sort().map(term => {
+    const idx = t.indexOf(term), win = t.slice(Math.max(0,idx-6), Math.min(t.length,idx+7));
+    const sec = intersect(uniq(win), securityTerms.concat(triggerTerms, impactTerms)).length;
+    const ben = intersect(uniq(win), benignContext).length;
+    const score = clip((0.25 + 0.10*(impactTerms.includes(term)?1:0) + 0.06*matched.length) * (0.25 + 0.12*sec + 0.18*ben));
+    let note = "ambiguous security term; inspect local context";
+    if (ben > 0) note = "ambiguous term appears with benign/reliability context";
+    if (sec >= 3 && ben === 0) note = "term is supported by nearby security evidence";
+    return {term, score, note};
+  }).slice(0,5);
+  const local = Math.max(0, ...contradictions.map(x=>x.score));
+  const patterns = cwePatterns.map(([pid,name,terms]) => {
+    const hits = intersect(set, terms).sort();
+    const coverage = clip(0.15 + 0.16*hits.length + 0.12*(trigger.length>0) + 0.14*(impact.length>0) + 0.08*lenNorm);
+    return {pid,name,hits,coverage};
+  });
+  const related = patterns.filter(p=>p.hits.length>0);
+  const low = (related.length?related:patterns).sort((a,b)=>a.coverage-b.coverage || b.hits.length-a.hits.length).slice(0,3);
+  const global = clip(0.35*(trigger.length>0) + 0.35*(impact.length>0) + 0.15*(matched.length>=2) + 0.15*lenNorm);
+  const pllm = clip(0.20 + 0.50*(trigger.length>0 && impact.length>0) + 0.12*Math.min(matched.length,3)/3 - 0.10*(benign.length>0));
+  const uncertainty = clip(0.5*local + 0.5*(1-global));
+  const alpha = sigmoid(8*(Math.abs(2*pbert-1)-uncertainty));
+  const pfinal = clip(alpha*pbert + (1-alpha)*pllm);
+  const label = pfinal >= 0.5 ? 'SBR' : 'NSBR';
+  document.getElementById('decision').textContent = label;
+  document.getElementById('decision').className = 'decision ' + (label==='SBR'?'sbr':'nsbr');
+  document.getElementById('pbar').style.width = Math.round(pfinal*100) + '%';
+  document.getElementById('rationale').textContent = label==='SBR' ? 'The report contains security-relevant terms and enough trigger/impact evidence for an SBR-oriented decision.' : 'The report lacks a sufficiently complete vulnerability chain or the matched terms appear mostly ambiguous/benign.';
+  for (const [id,val] of Object.entries({pfinal,pbert,pllm,alpha,local,global,unc:uncertainty})) document.getElementById(id).textContent = val.toFixed(3);
+  document.getElementById('termcount').textContent = matched.length;
+  document.getElementById('terms').innerHTML = matched.length ? matched.map(x=>`<span class="pill">${x}</span>`).join('') : 'No security terms matched.';
+  document.querySelector('#patterns tbody').innerHTML = low.map(p=>`<tr><td>${p.pid}<br><span class="muted">${p.name}</span></td><td>${p.coverage.toFixed(3)}</td><td>${p.hits.join(', ') || '-'}</td></tr>`).join('');
+  document.querySelector('#contradictions tbody').innerHTML = contradictions.length ? contradictions.map(c=>`<tr><td>${c.term}</td><td>${c.score.toFixed(3)}</td><td>${c.note}</td></tr>`).join('') : '<tr><td colspan="3">No ambiguous security terms detected.</td></tr>';
+}
+loadSample(0); analyze();
+</script>
+</body>
+</html>
