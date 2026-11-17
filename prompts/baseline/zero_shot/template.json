@@ -1,0 +1,33 @@
+{
+  "name": "ChatGPT-FS zero-shot template (Prompt_Eng + Category anchor)",
+  "task": "SBR identification (SBR vs NSBR)",
+  "demo_selection": {
+    "from": "../example/example.json",
+    "dataset_key": "{DATASET}",
+    "k": 0,
+    "rule": "Select the first k examples for the given dataset. (For one-shot, k=1 -> take index 0.)"
+  },
+  "placeholders": {
+    "DATASET": "Dataset key used in example.json (e.g., ambari, camel, chromium, derby, mozilla, redhat, wicket).",
+    "BUG_REPORT_TEXT": "Bug report text to be classified."
+  },
+  "placeholder_binding": {},
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are an AI expert in bug report analysis. Your task is to decide whether a given bug report is a security bug report (SBR) or non-security bug report (NSBR)."
+    },
+    {
+      "role": "user",
+      "content": "I will give you a bug report and you will analyze it, step-by-step, to know whether or not it is a security bug report. Got it?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I understand. I am an AI expert in bug report analysis, and I will analyze the bug report."
+    },
+    {
+      "role": "user",
+      "content": "Great! Let's begin then :)\n\nDecide whether a bug report is a security bug report (SBR) or non-security bug report (NSBR).\n\nBug report: \"\"\"{BUG_REPORT_TEXT}\"\"\"\nCategory:\n\nThink step-by-step to reach the right conclusion, but output only the category label after `Category:`."
+    }
+  ]
+}

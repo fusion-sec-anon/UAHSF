@@ -1,0 +1,11 @@
+[
+    {
+      "role": "system",
+      "content": "You are an AI expert in bug report analysis. Your task is to decide whether a given bug report is a security bug report (SBR) or non-security bug report (NSBR). You will be provided with uncertainty indicators and an initial prediction from a BERT model to guide your reasoning."
+    },
+    {
+      "role": "user",
+      "content": "Task: Analyze the following bug report and determine whether it describes a security bug.\n\nBug Report: \"\"\"{}\"\"\"\n\nUncertainty Indicators:\n• Completeness Deficiency: The report omits an explicit vulnerability trigger ([<[P_CWE]>]), completeness score = [<[M]>]).\n• Initial Prediction: Security-related (BERT confidence: [<[P_BERT]>]).\n\nInstructions:\n1) Interpret the bug report in context and identify any security-relevant term(s) (if any).\n2) Based on the completeness deficiency signals ([<[P_CWE]>], [<[M]>]), infer whether a hidden vulnerability trigger condition might exist.\n3) Make a final judgment, provide a brief justification, and indicate the predicted likelihood (as a percentage) of the report being security-related.\n\nOutput ONLY the JSON object defined in the schema below.\n\n## Output (STRICT JSON)\nReturn only a JSON object with the following fields:\n\n```json\n{\n  \"label\": \"SBR|NSBR\",\n  \"likelihood_percent\": 0,\n  \"justification\": \"string\",\n  \"term_interpretation\": \"string\",\n  \"inferred_trigger\": \"string\"\n}\n```\n"
+    }
+  ]
+  

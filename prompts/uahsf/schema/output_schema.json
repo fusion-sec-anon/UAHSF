@@ -1,0 +1,42 @@
+{
+  "title": "UAHSF Prompt Output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "label",
+    "likelihood_percent",
+    "justification"
+  ],
+  "properties": {
+    "label": {
+      "type": "string",
+      "enum": [
+        "SBR",
+        "NSBR"
+      ],
+      "description": "Final classification label."
+    },
+    "likelihood_percent": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Predicted likelihood of being security-related (percentage)."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Brief justification for the final decision."
+    },
+    "term_interpretation": {
+      "type": "string",
+      "description": "Interpretation of the ambiguous/security-related term in context."
+    },
+    "inferred_trigger": {
+      "type": "string",
+      "description": "Inferred trigger condition(s) if the report lacks explicit cues."
+    },
+    "raw_model_output": {
+      "type": "string",
+      "description": "Optional: raw text returned by the LLM."
+    }
+  }
+}

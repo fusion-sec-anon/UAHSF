@@ -1,0 +1,68 @@
+{
+  "title": "UAHSF Prompt Input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bug_report_text",
+    "S_KWD",
+    "C_scores",
+    "P_CWE",
+    "M",
+    "P_BERT"
+  ],
+  "properties": {
+    "bug_report_text": {
+      "type": "string",
+      "description": "Full bug report text (summary + description)."
+    },
+    "S_KWD": {
+      "type": [
+        "string",
+        "array"
+      ],
+      "description": "Selected security-related key term(s).",
+      "items": {
+        "type": "string"
+      }
+    },
+    "C_scores": {
+      "type": [
+        "number",
+        "array"
+      ],
+      "description": "Contradiction score(s) for S_KWD. If array, align by index.",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "P_CWE": {
+      "type": [
+        "string",
+        "array"
+      ],
+      "description": "Matched CWE trigger prototype(s) / cues (may be empty or partial).",
+      "items": {
+        "type": "string"
+      }
+    },
+    "M": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Completeness score (higher = more complete)."
+    },
+    "P_BERT": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "BERT confidence for 'security-related'."
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata (dataset, bug_id, etc.).",
+      "additionalProperties": true
+    }
+  }
+}
